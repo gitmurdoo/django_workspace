@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     # Local Apps
     'accounts',
+    'instagram',
 ]
 
 MIDDLEWARE = [
