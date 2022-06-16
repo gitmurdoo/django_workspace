@@ -52,6 +52,7 @@
 
                                     {% else %}
                                         <img src="{% url "pydenticon_image" user.username %}" style="width: 24px; height:24px;" />
+                                        {{ user.username }}
                                     {% endif %}
                                 </a>
 
@@ -62,10 +63,16 @@
             </div>
         </div>
 
-        
-        {% block content %}
-
-        {% endblock %}
+        <div class="border-top mt-3">
+            <div class="container offset-sm-3 col-sm-6">
+                <footer class="my-md-3 pt-md-3">
+                    <div class="row">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div class="border-top mt-3">
             <div class="container offset-sm-3 col-sm-6">

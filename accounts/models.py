@@ -27,3 +27,7 @@ class User(AbstractUser):
         blank=True, upload_to="accounts/avatar/%Y/%m/%d",
         help_text="48px * 48px 크기의 png/jpg 파일을 업로드해주세요."
     )
+
+    @property
+    def name(self):
+        return f"{self.username}"

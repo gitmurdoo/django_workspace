@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 import re
+from django.urls import reverse
 # Create your models here.
 
 
@@ -24,8 +25,8 @@ class Post(models.Model):
 
         return tag_list
 
-    # def get_absolute_url(self):
-    #     return reverse("", kwargs={"pk": self.pk})
+    def get_absolute_url(self):
+        return reverse("instagram:post_detail", args=[self.pk])
 
 
 class Tag(models.Model):
